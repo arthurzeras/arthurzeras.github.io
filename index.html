@@ -16,18 +16,20 @@
           <p class="animated slideInUp">hi.</p>
           <h1 class="animated slideInUp">My name is Arthur</h1>
           <h2 class="animated slideInUp">I'm a Web Developer</h2>
-          <div class="row mt-3">
-            <div class="col">
-              <button class="btn btn-actions">
-                Things i know
-              </button>
+          <transition enter-active-class="animated zoomIn">
+            <div class="row mt-3" v-if="buttons">
+              <div class="col">
+                <button class="btn btn-actions">
+                  Things i know
+                </button>
+              </div>
+              <div class="col">
+                <button class="btn btn-actions">
+                  Talk to me
+                </button>
+              </div>
             </div>
-            <div class="col">
-              <button class="btn btn-actions">
-                Talk to me
-              </button>
-            </div>
-          </div>
+          </transition>
         </div>
       </div>
     </div>
