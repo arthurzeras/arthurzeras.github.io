@@ -6,22 +6,32 @@
     <title>Arthur Oliveira - Web Developer</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <link rel="stylesheet" href="assets/styles.css">
   </head>
   <body>
-    <div class="container-fluid">
+    <div class="container-fluid" id="app">
       <div class="d-flex justify-content-center align-content-center flex-column" style="height: calc(100vh - 60px)">
         <div class="align-self-center text-center name-content">
-          <p>hi.</p>
-          <h1>My name is Arthur</h1>
-          <h2>I'm a Web Developer</h2>
+          <p class="animated slideInUp">hi.</p>
+          <h1 class="animated slideInUp">My name is Arthur</h1>
+          <h2 class="animated slideInUp">I'm a Web Developer</h2>
+          <div class="row mt-3">
+            <div class="col">
+              <button class="btn btn-actions">
+                Things i know
+              </button>
+            </div>
+            <div class="col">
+              <button class="btn btn-actions">
+                Talk to me
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-      <!-- <div class="header">
-        <div class="my-name">
-          <h1>ARTHUR OLIVEIRA</h1>
-        </div>
-      </div> -->
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="assets/app.js"></script>
   </body>
 </html>

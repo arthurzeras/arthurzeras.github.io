@@ -32,7 +32,7 @@ body {
 
 .name-content p {
   margin: 0;
-  font-size: 12pt;
+  font-size: 14pt;
 }
 
 .name-content h1 {
@@ -41,4 +41,20 @@ body {
 
 .name-content h2 {
   font-size: 18pt;
+}
+
+.btn-actions {
+  border: 2px solid #fff;
+  background: transparent;
+  border-radius: 0;
+  color: #fff;
+  padding-left: 50px;
+  padding-right: 50px;
+  transition: .4s;
+}
+
+.btn-actions:hover {
+  transform: scale(1.2);
+  color: black;
+  background: #fff;
 }
