@@ -5,7 +5,6 @@
 body {
   background: #131313;
   border: 15px solid #f2f2f2;
-  border-right-width: 5px;
   height: 100vh;
   color: #f2f2f2;
   overflow: hidden;
@@ -31,7 +30,15 @@ body {
 	background-color: #f2f2f2;
 }
 
-.header .my-name h1{
-  text-align: center;
+.name-content p {
+  margin: 0;
+  font-size: 12pt;
+}
+
+.name-content h1 {
   font-size: 22pt;
+}
+
+.name-content h2 {
+  font-size: 18pt;
 }
