@@ -21,7 +21,7 @@
             <h2 class="animated slideInUp">I'm a Web Developer</h2>
             <transition enter-active-class="animated zoomIn">
               <div class="row mt-3" v-if="buttons">
-                <div class="col">
+                <div class="col mb-2">
                   <button class="btn btn-actions" @click="pageState = 'knowledges'">
                     Things i know
                   </button>
@@ -35,8 +35,11 @@
             </transition>
           </template>
           <my-modal v-else-if="pageState === 'knowledges'" @close="pageState = 'home'">
-            <div class="row">
-              
+            <div class="row justify-content-center" style="width: 100vh;">
+              <div class="col-4" v-for="(knowledge, index) in knowledges" :key="index">
+                <i class="devicon" :class="knowledge.icon"></i>
+                <div>{{ knowledge.name }}</div>
+              </div>
             </div>
           </my-modal>
         </div>

@@ -76,3 +76,7 @@ body {
 .devicon {
   font-size: 30pt;
 }
+
+.row > * {
+  margin-top: 15px;
+}
