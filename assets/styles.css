@@ -11,39 +11,27 @@ body {
 }
 
 .container-fluid {
-  overflow-y: scroll;
-  height: 100%;
   padding: 10px;
 }
 
-.container-fluid::-webkit-scrollbar-track {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #131313;
+.my-content {
+  height: calc(100vh - 50px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.container-fluid::-webkit-scrollbar {
-	width: 10px;
-	background-color: #131313;
-}
-
-.container-fluid::-webkit-scrollbar-thumb {
-	background-color: #f2f2f2;
-}
-
-.name-content {
-  transition: all .4s;
-}
-
-.name-content p {
+.my-content .hi {
   margin: 0;
   font-size: 14pt;
 }
 
-.name-content h1 {
+.my-content .my-name {
   font-size: 22pt;
 }
 
-.name-content h2 {
+.my-content .i-am {
   font-size: 18pt;
 }
 
@@ -63,6 +51,32 @@ body {
   background: #fff;
 }
 
+.my-knowledges {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-knowledges .row {
+  width: 80%;
+}
+
+.my-modal {
+  position: absolute;
+  top: 15px;
+  bottom: 15px;
+  right: 15px;
+  left: 15px;
+  width: calc(100% - 30px);
+  background-color: black;
+}
+
+.my-modal .title {
+  font-size: 18pt;
+  margin: 15px;
+  margin-right: 50px;
+}
+
 .my-modal .close-button {
   color: #fff;
   background-color: transparent;
@@ -71,6 +85,7 @@ body {
   position: fixed;
   top: 20px;
   right: 20px;
+  overflow-y: auto;
 }
 
 .devicon {
@@ -79,4 +94,13 @@ body {
 
 .row > * {
   margin-top: 15px;
+}
+
+@media (max-width: 576px) {
+  .my-knowledges .row {
+    width: 100%;
+  }
+  .my-modal .title {
+    font-size: 15pt;
+  }
 }

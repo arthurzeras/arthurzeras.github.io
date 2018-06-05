@@ -1,19 +1,23 @@
 Vue.component('my-modal', {
   template: `
-  <div class="my-modal">
-    <button class="btn close-button" @click="$emit('close')">
-      <i class="zmdi zmdi-close zmdi-hc-2x"></i>
-    </button>
-    <slot></slot>
-  </div>
-  `
+  <transition enter-active-class="animated slideInDown" leave-active-class="animated slideOutUp">
+    <div class="my-modal" v-if="show">
+      <h1 class="title">{{ title }}</h1>
+      <button class="btn close-button" @click="$emit('close')">
+        <i class="zmdi zmdi-close zmdi-hc-2x"></i>
+      </button>
+      <slot></slot>
+    </div>
+  </transition>
+  `,
+  props: ['show', 'title']
 })
 
 new Vue({
   el: '#app',
   data: {
-    pageState: 'home',
-    buttons: false,
+    knoledgesModal: false,
+    talkModal: false,
     knowledges: [
       {icon: 'devicon-javascript-plain', name: 'Javascript'},
       {icon: 'devicon-vuejs-plain', name: 'Vue.js'},
@@ -38,10 +42,5 @@ new Vue({
       {icon: 'devicon-phpstorm-plain', name: 'PHP Storm'},
       {icon: 'devicon-webstorm-plain', name: 'WebStorm'}
     ]
-  },
-  mounted () {
-    setTimeout(() => {
-      this.buttons = true
-    }, 1000)
   }
 })
