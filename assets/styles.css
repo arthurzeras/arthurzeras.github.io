@@ -51,7 +51,7 @@ body {
   background: #fff;
 }
 
-.my-knowledges {
+.my-knowledges, .who-am-i {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,6 +59,36 @@ body {
 
 .my-knowledges .row {
   width: 80%;
+}
+
+.who-am-i {
+  flex-direction: column;
+}
+
+.who-am-i p {
+  font-size: 15pt;
+}
+
+.who-am-i .email a {
+  font-size: 16pt;
+  color: #988be8;
+}
+
+.who-am-i .links {
+  color: #fff;
+  transition: all .4s;
+  transform: translateY(0);
+  display: block;
+}
+
+.who-am-i .links:hover {
+  transform: translateY(-5px);
+  text-decoration: none;
+  color: #988be8;
+}
+
+.who-am-i .links-row {
+  width: 50%;
 }
 
 .my-modal {
@@ -97,10 +127,13 @@ body {
 }
 
 @media (max-width: 576px) {
-  .my-knowledges .row {
+  .my-knowledges .row, .who-am-i .links-row {
     width: 100%;
   }
   .my-modal .title {
     font-size: 15pt;
+  }
+  .who-am-i p {
+    font-size: 12pt;
   }
 }
