@@ -57,10 +57,6 @@ body {
   justify-content: center;
 }
 
-.my-knowledges {
-  min-height: 100vh;
-}
-
 .my-knowledges .row {
   width: 80%;
 }
